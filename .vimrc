@@ -1,6 +1,9 @@
 set nocompatible
 filetype off        " required to use Vundle
 
+" To install Vundle plugin
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 try
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
