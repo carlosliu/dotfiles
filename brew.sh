@@ -44,7 +44,7 @@ brew install wget --with-iri
 # Install more recent versions of some OS X tools.
 #brew install vim --override-system-vi
 brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
+#brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 #brew install homebrew/php/php55 --with-gmp
 
@@ -99,6 +99,9 @@ brew install ssh-copy-id
 brew install tree
 brew install webkit2png
 #brew install zopfli
+
+# Install homebrew-rmtree, removing a formula and its unused dependencies
+brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 
 # Install some of my favorite tools.
 brew install dos2unix
