@@ -59,6 +59,7 @@ try
     """Plugin 'rizzatti/funcoo.vim'
     """Plugin 'rizzatti/dash.vim'
     "Plugin 'Valloric/YouCompleteMe'
+    Plugin 'wakatime/vim-wakatime'
 
     " Snippets
     Plugin 'SirVer/ultisnips'   " requires +python support
