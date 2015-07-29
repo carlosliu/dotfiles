@@ -103,6 +103,7 @@ set laststatus=2                " always show the status line
 set title                       " show the filename in the window titlebar
 set showbreak=…                 " show softwarpped continuing line
 set cursorline                  " highlight current line
+set hidden                      " buffer becomes hidden when it is abandoned
 set mouse=a                     " enable mouse in all modes
 set visualbell                  " no sound
 set noerrorbells                " disable error bells
