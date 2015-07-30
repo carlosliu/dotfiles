@@ -67,8 +67,10 @@ try
     Plugin 'wakatime/vim-wakatime'
 
     " Snippets
-    Plugin 'SirVer/ultisnips'   " requires +python support
-    Plugin 'honza/vim-snippets'
+    if v:version > 704
+        Plugin 'SirVer/ultisnips'   " requires +python support
+        Plugin 'honza/vim-snippets'
+    endif
 
     " misc
     "Plugin 'ehamberg/vim-cute-python'
@@ -92,8 +94,7 @@ endtry
 filetype plugin indent on       " required by Vundle
 
 
-" ================ General Config ================
-set encoding=utf-8 nobomb       " use UTF-8 without BOM
+" ================ General config ================
 set ruler                       " show the cursor position
 set number                      " enable line numbers
 set showcmd                     " show the (partial) command as it’s being typed
@@ -126,6 +127,22 @@ set modelines=4
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
+
+
+" ================ Environment setting ================
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+  set nobomb
+endif
+if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
+  set ambiwidth=double
+endif
 
 
 " ================ Color theme ================

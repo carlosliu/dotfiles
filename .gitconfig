@@ -140,6 +140,13 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
+[pager]
+
+	# Use https://github.com/git/git/tree/master/contrib/diff-highlight
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+
 [push]
 
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
