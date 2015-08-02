@@ -18,7 +18,7 @@ if has("gui_running")
 	set linespace=8
 
 	"set guifont=Monaco:h14
-	set guifont=Menlo:h15
+	set guifont=Menlo:h14
 	"set guifont=Source\ Code\ Pro:h11
 
 	" Make MacVim looks cool

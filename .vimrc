@@ -17,7 +17,7 @@ try
 
     " colorschemes
     Plugin 'altercation/vim-colors-solarized'
-    "Plugin 'nanotech/jellybeans.vim'
+    Plugin 'nanotech/jellybeans.vim'
     Plugin 'sickill/vim-monokai'
     "Plugin 'tpope/vim-vividchalk'
     "Plugin 'tomasr/molokai'
@@ -147,8 +147,10 @@ endif
 
 " ================ Color theme ================
 set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+"colorscheme solarized
+"let g:solarized_termtrans=1
+colorscheme jellybeans
+"let g:jellybeans_use_lowcolor_black=0
 syntax on                       " enable syntax highlighting
 
 
