@@ -4,94 +4,121 @@ set nocompatible
 
 
 " ================ Vundle plugin ================
-filetype off        " required to use Vundle
+filetype off		" required to use Vundle
 
 " To install Vundle plugin
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 try
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
 
-    " let Vundle manage Vundle (required!)
-    Plugin 'gmarik/Vundle.vim'
+	" let Vundle manage Vundle (required!)
+	Plugin 'gmarik/Vundle.vim'
 
-    " colorschemes
-    Plugin 'altercation/vim-colors-solarized'
-    Plugin 'nanotech/jellybeans.vim'
-    Plugin 'sickill/vim-monokai'
-    "Plugin 'tpope/vim-vividchalk'
-    "Plugin 'tomasr/molokai'
-    "Plugin 'nelstrom/vim-mac-classic-theme'
+	" colorschemes
+	Plugin 'altercation/vim-colors-solarized'
+	Plugin 'nanotech/jellybeans.vim'
+	Plugin 'sickill/vim-monokai'
+	"Plugin 'tpope/vim-vividchalk'
+	"Plugin 'tomasr/molokai'
+	"Plugin 'nelstrom/vim-mac-classic-theme'
 
-    " enhanced file formats
-    "Plugin 'tpope/vim-haml'
-    "Plugin 'tpope/vim-markdown'
-    "Plugin 'nelstrom/vim-markdown-folding'
-    Plugin 'plasticboy/vim-markdown'
-    "Plugin 'uarun/vim-protobuf'
-    "Plugin 'Blackrush/vim-gocode'
-    "Plugin 'fatih/vim-go'
-    "Plugin 'honza/dockerfile.vim'
-    Plugin 'elzr/vim-json'
-    "Plugin 'kchmck/vim-coffee-script'
-    "Plugin 'adimit/prolog.vim'
-    Plugin 'pangloss/vim-javascript'
-    Plugin 'mxw/vim-jsx'     " depends on pangloss/vim-javascript
-    "Plugin 'LaTeX-Box-Team/LaTeX-Box'
-    Plugin 'groenewege/vim-less'
-    "Plugin 'evanmiller/nginx-vim-syntax'
-    "Plugin 'jimenezrick/vimerl'
-    "Plugin 'elixir-lang/vim-elixir'
+	" language specific
+	"Plugin 'tpope/vim-haml'
+	"Plugin 'tpope/vim-rails'
+	Plugin 'tpope/vim-markdown'
+	Plugin 'nelstrom/vim-markdown-folding'
+	"Plugin 'plasticboy/vim-markdown'
+	"Plugin 'uarun/vim-protobuf'
+	"Plugin 'jnwhiteh/vim-golang'
+	"Plugin 'Blackrush/vim-gocode'
+	"Plugin 'fatih/vim-go'
+	"Plugin 'honza/dockerfile.vim'
+	Plugin 'elzr/vim-json'
+	"Plugin 'kchmck/vim-coffee-script'
+	Plugin 'pangloss/vim-javascript'
+	Plugin 'mxw/vim-jsx'		" depends on pangloss/vim-javascript
+	"Plugin 'LaTeX-Box-Team/LaTeX-Box'
+	Plugin 'groenewege/vim-less'
+	"Plugin 'evanmiller/nginx-vim-syntax'
+	"Plugin 'adimit/prolog.vim'
+	"Plugin 'jimenezrick/vimerl'
+	"Plugin 'elixir-lang/vim-elixir'
+	"Plugin 'mattreduce/vim-mix'
+	"Plugin''carlosgaldino/exlixir-snippets 
+	"Plugin 'digitaltoad/vim-jade'
+	"Plugin 'tclem/vim-arduino'
+	"Plugin 'sudar/vim-arduino-syntax'
+	"Plugin 'toyamarinyon/vim-swift'
+	"Plugin 'lukerandall/haskellmode-vim'
+	"Plugin 'enomsg/vim-haskellConcealPlus'
+	"Plugin 'derekwyatt/vim-scala'
 
-    " enchaned Vim operations
-    "Plugin 'tommcdo/vim-exchange'
-    "Plugin 'tpope/vim-repeat'
-    "Plugin 'tpope/vim-surround'
+	" quick generation of HTML
+	"Plugin 'mattn/emmet-vim'
+	"Plugin 'gregsexton/MatchTag'
 
-    "Plugin 'ervandew/supertab'
+	" enchaned Vim operations
+	"Plugin 'tpope/vim-surround'
+	"Plugin 'tpope/vim-speeddating'
+	"Plugin 'tpope/vim-repeat'
+	"Plugin 'tpope/vim-abolish'
+	"Plugin 'tommcdo/vim-exchange'
+	"Plugin 'Lokaltog/vim-easymotion'		" improve vim movement
 
-    "Plugin 'ap/vim-css-color'
-    "Plugin 'hail2u/vim-css3-syntax'
-    "Plugin 'jacekd/vim-iawriter'
-    "Plugin 'laktek/distraction-free-writing-vim'
-    Plugin 'kien/rainbow_parentheses.vim'
+	"Plugin 'ervandew/supertab'
 
-    " app integration
-    "Plugin 'jpalardy/vim-slime'
-    "Plugin 'tpope/vim-fugitive'
-    "Plugin 'rking/ag.vim'
-    "Plugin 'mileszs/ack.vim'
-    "Plugin 'rizzatti/funcoo.vim'
-    "Plugin 'rizzatti/dash.vim'
-    "Plugin 'Valloric/YouCompleteMe'
-    Plugin 'wakatime/vim-wakatime'
+	"Plugin 'ap/vim-css-color'
+	"Plugin 'hail2u/vim-css3-syntax'
+	"Plugin 'jacekd/vim-iawriter'
+	"Plugin 'laktek/distraction-free-writing-vim'
+	Plugin 'kien/rainbow_parentheses.vim'
 
-    " Snippets
-    if v:version > 704
-        Plugin 'SirVer/ultisnips'   " requires +python support
-        Plugin 'honza/vim-snippets'
-    endif
+	" app integration
+	"Plugin 'jpalardy/vim-slime'
+	"Plugin 'tpope/vim-fugitive'
+	"Plugin 'rking/ag.vim'
+	"Plugin 'mileszs/ack.vim'
+	"Plugin 'rizzatti/funcoo.vim'
+	"Plugin 'rizzatti/dash.vim'
+	"Plugin 'Valloric/YouCompleteMe'
+	Plugin 'wakatime/vim-wakatime'
+	"Plugin 'christoomey/vim-tmux-navigator'		" have tmux play nice with vim
+	"Plugin 'vim-scripts/LanguageTool'		" grammer checker
 
-    " misc
-    "Plugin 'ehamberg/vim-cute-python'
-    Plugin 'bling/vim-airline'
-    Plugin 'Townk/vim-autoclose'
-    Plugin 'kien/ctrlp.vim'
-    Plugin 'majutsushi/tagbar'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'scrooloose/syntastic'
-    "Plugin 'spolu/dwm.vim'
-    Plugin 'tmhedberg/matchit'
-    "Plugin 'DrawIt'
-    Plugin 'godlygeek/tabular'
-    "Plugin 'terryma/vim-expand-region'
+	" Dash Plugins, used for looking up documentation on OS X
+	"Plugin 'rizzatti/funcoo.vim'
+	"Plugin 'rizzatti/dash.vim'
 
-    call vundle#end()
+	" Snippets
+	Plugin 'SirVer/ultisnips'		" requires +python support
+	Plugin 'honza/vim-snippets'
+	"Plugin 'garbas/vim-snipmate'
+	"Plugin 'tomtom/tlib_vim'
+	"Plugin 'MarcWeber/vim-addon-mw-utils'
+
+	" misc
+	"Plugin 'ehamberg/vim-cute-python'
+	Plugin 'bling/vim-airline'
+	Plugin 'Townk/vim-autoclose'
+	Plugin 'kien/ctrlp.vim'
+	Plugin 'majutsushi/tagbar'
+	Plugin 'scrooloose/nerdtree'
+	Plugin 'scrooloose/syntastic'
+	"Plugin 'spolu/dwm.vim'
+	Plugin 'tmhedberg/matchit'
+	"Plugin 'DrawIt'
+	Plugin 'godlygeek/tabular'
+	"Plugin 'terryma/vim-expand-region'
+	Plugin 'rking/ag.vim'		" The Silver Search - A better grep/ack
+	"Plugin 'triglav/vim-visual-increment'		" make visual C-A work properly
+
+	call vundle#end()
 catch /E117:/
-    " Vundle is not available
+	" Vundle is not available
 endtry
 
-filetype plugin indent on       " required by Vundle
+filetype plugin indent on		" required by Vundle
 
 
 " ================ General config ================
@@ -132,7 +159,7 @@ set secure
 " ================ Environment setting ================
 if has("multi_byte")
   if &termencoding == ""
-    let &termencoding = &encoding
+	let &termencoding = &encoding
   endif
   set encoding=utf-8
   setglobal fileencoding=utf-8
@@ -143,6 +170,7 @@ endif
 if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
   set ambiwidth=double
 endif
+set shell=/usr/bin/env\ bash
 
 
 " ================ Color theme ================
@@ -221,17 +249,17 @@ map <Leader>r <esc>:NERDTreeFind<cr>"
 
 " ===== Rainbow parentheses
 if exists(':RainbowParenthesesToggle')
-    au VimEnter * RainbowParenthesesToggle
-    au Syntax * RainbowParenthesesLoadRound     " ()
-    au Syntax * RainbowParenthesesLoadSquare    " []
-    au Syntax * RainbowParenthesesLoadBraces    " {}
+	au VimEnter * RainbowParenthesesToggle
+	au Syntax * RainbowParenthesesLoadRound     " ()
+	au Syntax * RainbowParenthesesLoadSquare    " []
+	au Syntax * RainbowParenthesesLoadBraces    " {}
 endif
 
 " ===== airline config
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
 let g:airline_symbols.branch='⑂'
 
