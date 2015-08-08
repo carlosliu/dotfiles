@@ -9,11 +9,13 @@ sudo apt-get install build-essential linux-headers-amd64 \
 	iceweasel curl \
 	i3 i3blocks rxvt-unicode \
 	scrot feh atool ranger mosh highlight p7zip p7zip-full unrar \
-	smbclient cifs-utils \
+	imagemagick libmagickcore-extra \
+	smbclient cifs-utils smbnetfs \
+	gvfs gvfs-bin gconf2 \
 	faenza-icon-theme dmz-cursor-theme \
 	fonts-noto fonts-droid
 
-sudo apt-get install --no-install-recommends gpicview slim \
+sudo apt-get install --no-install-recommends gpicview slim dbus-x11 \
 	lxterminal lxappearance lxrandr lxtask \
 
 

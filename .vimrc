@@ -22,6 +22,7 @@ try
 	"Plugin 'tpope/vim-vividchalk'
 	"Plugin 'tomasr/molokai'
 	"Plugin 'nelstrom/vim-mac-classic-theme'
+	Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 	" language specific
 	"Plugin 'tpope/vim-haml'
@@ -45,7 +46,7 @@ try
 	"Plugin 'jimenezrick/vimerl'
 	"Plugin 'elixir-lang/vim-elixir'
 	"Plugin 'mattreduce/vim-mix'
-	"Plugin''carlosgaldino/exlixir-snippets 
+	"Plugin 'carlosgaldino/elixir-snippets'
 	"Plugin 'digitaltoad/vim-jade'
 	"Plugin 'tclem/vim-arduino'
 	"Plugin 'sudar/vim-arduino-syntax'
@@ -175,9 +176,10 @@ set shell=/usr/bin/env\ bash
 
 " ================ Color theme ================
 set background=dark
+colorscheme dracula
 "colorscheme solarized
 "let g:solarized_termtrans=1
-colorscheme jellybeans
+"colorscheme jellybeans
 "let g:jellybeans_use_lowcolor_black=0
 syntax on                       " enable syntax highlighting
 
