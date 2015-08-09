@@ -14,12 +14,14 @@ if has("gui_running")
 
 	" Don’t blink cursor in normal mode
 	set guicursor=n:blinkon0
-	" Better line-height
-	set linespace=8
-
-	"set guifont=Monaco:h14
-	set guifont=Menlo:h14
-	"set guifont=Source\ Code\ Pro:h11
+	if g:airline_powerline_fonts != 1
+		"set guifont=Monaco:h14
+		set guifont=Menlo:h14
+		set linespace=4     " Better line-height
+	else
+		set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+		set linespace=0     " Better line-height
+	endif
 
 	" Make MacVim looks cool
 	if has("gui_macvim")

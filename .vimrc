@@ -258,12 +258,32 @@ if exists(':RainbowParenthesesToggle')
 endif
 
 " ===== airline config
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+" require powerline patched fonts
+"   * set Non-ASCII font in iTerm2
+"   * set guifont in .gvimrc
+let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-let g:airline_symbols.branch='⑂'
+if g:airline_powerline_fonts != 1
+	" unicode symbols
+	let g:airline_left_sep = ''
+	let g:airline_right_sep = ''
+	"let g:airline_left_sep = '»'
+	"let g:airline_right_sep = '«'
+	"let g:airline_left_sep = '▶'
+	"let g:airline_right_sep = '◀'
+	"let g:airline_symbols.branch = '⎇'
+	let g:airline_symbols.branch='⑂'
+	let g:airline_symbols.linenr = '␊'
+	"let g:airline_symbols.linenr = '␤'
+	"let g:airline_symbols.linenr = '¶'
+	"let g:airline_symbols.crypt = '🔒'
+	let g:airline_symbols.whitespace = 'Ξ'
+endif
+let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
 
 " ===== UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
