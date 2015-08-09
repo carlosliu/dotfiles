@@ -143,6 +143,7 @@ set backspace=indent,eol,start  " allow backspace in insert mode
 set list listchars=tab:⇥\ ,trail:␣,eol:↩,nbsp:␣,extends:…,precedes:…
 """set list listchars=trail:·,tab:»·
 """set list listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list!
 
 " Keep longer history for commands and serach patterns
 set history=1000
@@ -209,7 +210,7 @@ set scrolloff=3 " start scrolling when 3 lines away from margins
 "set sidescroll=1
 
 
-" ================ Completion =======================
+" ================ Completion ================
 set wildmode=list:longest
 set wildmenu                " enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
@@ -227,7 +228,7 @@ set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.swp,*.bak
 
 
-" ================ Mapping =======================
+" ================ Mapping ================
 " Change mapleader
 let mapleader=","
 
@@ -248,6 +249,19 @@ map <Leader>n <esc>:NERDTreeToggle<cr>
 " Reveal current file in NERDTree with <Leader>r
 map <Leader>r <esc>:NERDTreeFind<cr>"
 
+" Strip trailing whitespace (,ss)
+function! StripWhitespace()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:%s/\s\+$//e
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfunction
+noremap <leader>ss :call StripWhitespace()<CR>
+
+" Save a file as root (,W)
+noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
 
 " ===== Rainbow parentheses
 if exists(':RainbowParenthesesToggle')
@@ -258,7 +272,11 @@ if exists(':RainbowParenthesesToggle')
 endif
 
 " ===== airline config
-" require powerline patched fonts
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" Require powerline patched fonts
 "   * set Non-ASCII font in iTerm2
 "   * set guifont in .gvimrc
 let g:airline_powerline_fonts = 1
@@ -274,13 +292,15 @@ if g:airline_powerline_fonts != 1
 	"let g:airline_left_sep = '▶'
 	"let g:airline_right_sep = '◀'
 	"let g:airline_symbols.branch = '⎇'
-	let g:airline_symbols.branch='⑂'
+	let g:airline_symbols.branch = '⑂'
 	let g:airline_symbols.linenr = '␊'
 	"let g:airline_symbols.linenr = '␤'
 	"let g:airline_symbols.linenr = '¶'
 	"let g:airline_symbols.crypt = '🔒'
 	let g:airline_symbols.whitespace = 'Ξ'
 endif
+"let g:airline_left_alt_sep = '|'
+"let g:airline_right_alt_sep = '|''
 let g:airline_symbols.paste = 'ρ'
 "let g:airline_symbols.paste = 'Þ'
 "let g:airline_symbols.paste = '∥'
@@ -295,18 +315,19 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1 "show the error list automatically
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-"mark syntax errors with :signs
-let g:syntastic_enable_signs=1
-"automatically jump to the error when saving the file
-let g:syntastic_auto_jump=0
+let g:syntastic_always_populate_loc_list=1
+" show the error list automatically
 let g:syntastic_auto_loc_list=1
+" mark syntax errors with :signs
+let g:syntastic_enable_signs=1
+" automatically jump to the error when saving the file
+let g:syntastic_auto_jump=0
 "don't care about warnings
 "let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+
+
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -336,18 +357,6 @@ set shortmess=atI
 	"set relativenumber
 	"au BufReadPost * set relativenumber
 "endif
-
-" Strip trailing whitespace (,ss)
-function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
-endfunction
-noremap <leader>ss :call StripWhitespace()<CR>
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 "if has("autocmd")

@@ -19,7 +19,8 @@ if has("gui_running")
 		set guifont=Menlo:h14
 		set linespace=4     " Better line-height
 	else
-		set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+		"set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+		set guifont=Iosevka:h15
 		set linespace=0     " Better line-height
 	endif
 
