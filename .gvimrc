@@ -19,9 +19,21 @@ if has("gui_running")
 		set guifont=Menlo:h14
 		set linespace=4     " Better line-height
 	else
+		if g:Computer == 'cello'
+			set guifont=Iosevka:h15
+		else
+			set guifont=Iosevka:h14
+		endif
 		"set guifont=Source\ Code\ Pro\ for\ Powerline:h14
-		set guifont=Iosevka:h15
-		set linespace=0     " Better line-height
+		"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+		"set guifont=Inconsolata-g\ for\ Powerline:h14
+		"
+		" Better line-height for different powerline patched fonts
+		" -3 : for Inconsolata-g or -dz font
+		"  2 : for DejaVu or Droid Sans Mono series fonts
+		"      for Anonymouc Pro and Liberation Mono font
+		"  0 : for Iosevka and Source Code Pro font
+		set linespace=0
 	endif
 
 	" Make MacVim looks cool

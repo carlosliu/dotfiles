@@ -3,6 +3,18 @@
 set nocompatible
 
 
+" determine the OS and Computer
+if has("win32")
+	let g:OS = 'windows'
+elseif has("unix")
+	let g:OS = system('uname')
+	if substitute(g:OS, '\n', '', '') == 'Darwin'
+		let g:OS = 'osx'
+		let g:Computer = substitute(system('uname -n'), '\n', '', '')
+	endif
+endif
+
+
 " ================ Vundle plugin ================
 filetype off		" required to use Vundle
 
@@ -20,7 +32,7 @@ try
 	Plugin 'nanotech/jellybeans.vim'
 	Plugin 'sickill/vim-monokai'
 	"Plugin 'tpope/vim-vividchalk'
-	"Plugin 'tomasr/molokai'
+	Plugin 'tomasr/molokai'
 	"Plugin 'nelstrom/vim-mac-classic-theme'
 	Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
@@ -31,10 +43,9 @@ try
 	Plugin 'nelstrom/vim-markdown-folding'
 	"Plugin 'plasticboy/vim-markdown'
 	"Plugin 'uarun/vim-protobuf'
-	"Plugin 'jnwhiteh/vim-golang'
 	"Plugin 'Blackrush/vim-gocode'
 	"Plugin 'fatih/vim-go'
-	"Plugin 'honza/dockerfile.vim'
+	Plugin 'honza/dockerfile.vim'
 	Plugin 'elzr/vim-json'
 	"Plugin 'kchmck/vim-coffee-script'
 	Plugin 'pangloss/vim-javascript'
@@ -67,8 +78,6 @@ try
 	"Plugin 'tommcdo/vim-exchange'
 	"Plugin 'Lokaltog/vim-easymotion'		" improve vim movement
 
-	"Plugin 'ervandew/supertab'
-
 	"Plugin 'ap/vim-css-color'
 	"Plugin 'hail2u/vim-css3-syntax'
 	"Plugin 'jacekd/vim-iawriter'
@@ -76,12 +85,10 @@ try
 	Plugin 'kien/rainbow_parentheses.vim'
 
 	" app integration
-	"Plugin 'jpalardy/vim-slime'
-	"Plugin 'tpope/vim-fugitive'
-	"Plugin 'rking/ag.vim'
+	Plugin 'jpalardy/vim-slime'
+	Plugin 'tpope/vim-fugitive'
+	Plugin 'rking/ag.vim'		" The Silver Search - A better grep/ack
 	"Plugin 'mileszs/ack.vim'
-	"Plugin 'rizzatti/funcoo.vim'
-	"Plugin 'rizzatti/dash.vim'
 	"Plugin 'Valloric/YouCompleteMe'
 	Plugin 'wakatime/vim-wakatime'
 	"Plugin 'christoomey/vim-tmux-navigator'		" have tmux play nice with vim
@@ -94,9 +101,6 @@ try
 	" Snippets
 	Plugin 'SirVer/ultisnips'		" requires +python support
 	Plugin 'honza/vim-snippets'
-	"Plugin 'garbas/vim-snipmate'
-	"Plugin 'tomtom/tlib_vim'
-	"Plugin 'MarcWeber/vim-addon-mw-utils'
 
 	" misc
 	"Plugin 'ehamberg/vim-cute-python'
@@ -111,8 +115,8 @@ try
 	"Plugin 'DrawIt'
 	Plugin 'godlygeek/tabular'
 	"Plugin 'terryma/vim-expand-region'
-	Plugin 'rking/ag.vim'		" The Silver Search - A better grep/ack
 	"Plugin 'triglav/vim-visual-increment'		" make visual C-A work properly
+	"Plugin 'ervandew/supertab'
 
 	call vundle#end()
 catch /E117:/
