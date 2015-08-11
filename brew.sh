@@ -99,18 +99,20 @@ brew install ssh-copy-id
 brew install tree
 brew install webkit2png
 #brew install zopfli
-brew install colordiff
 
 # Install homebrew-rmtree, removing a formula and its unused dependencies
 brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 
 # Install some of my favorite tools.
 brew install dos2unix
+brew install colordiff
+brew install tmux
 brew install mmv
 brew install ffmpeg
 brew install youtube-dl
 brew install multimarkdown
 brew install exiftool
+brew install ctags
 
 # Install NVM
 # http://stackoverflow.com/questions/28017374/what-is-the-suggested-way-to-install-brew-node-js-io-js-nvm-npm-on-os-x
@@ -120,6 +122,10 @@ brew install nvm
 
 # Install MacVim
 brew install macvim --override-system-vim
+
+#brew install caskroom/cask/brew-cask
+#brew cask install virtualbox
+#brew install boot2docker docker docker-compose
 
 # Remove outdated versions from the cellar.
 brew cleanup
