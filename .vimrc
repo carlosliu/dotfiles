@@ -5,129 +5,130 @@ set nocompatible
 
 " determine the OS and Computer
 if has("win32")
-	let g:OS = 'windows'
+    let g:OS = 'windows'
 elseif has("unix")
-	let g:OS = system('uname')
-	if substitute(g:OS, '\n', '', '') == 'Darwin'
-		let g:OS = 'osx'
-		let g:Computer = substitute(system('uname -n'), '\n', '', '')
-	endif
+    let g:OS = system('uname')
+    if substitute(g:OS, '\n', '', '') == 'Darwin'
+        let g:OS = 'osx'
+        let g:Computer = substitute(system('uname -n'), '\n', '', '')
+    endif
 endif
 
 
 " ================ Vundle plugin ================
-filetype off		" required to use Vundle
+filetype off                    " required to use Vundle
 
 " To install Vundle plugin
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 try
-	set rtp+=~/.vim/bundle/Vundle.vim
-	call vundle#begin()
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
-	" let Vundle manage Vundle (required!)
-	Plugin 'gmarik/Vundle.vim'
+    " let Vundle manage Vundle (required!)
+    Plugin 'gmarik/Vundle.vim'
 
-	" colorschemes
-	Plugin 'altercation/vim-colors-solarized'
-	Plugin 'nanotech/jellybeans.vim'
-	Plugin 'sickill/vim-monokai'
-	"Plugin 'tpope/vim-vividchalk'
-	Plugin 'tomasr/molokai'
-	"Plugin 'nelstrom/vim-mac-classic-theme'
-	Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+    " colorschemes
+    Plugin 'altercation/vim-colors-solarized'
+    Plugin 'nanotech/jellybeans.vim'
+    Plugin 'sickill/vim-monokai'
+    "Plugin 'tpope/vim-vividchalk'
+    Plugin 'tomasr/molokai'
+    "Plugin 'nelstrom/vim-mac-classic-theme'
+    Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
-	" language specific
-	"Plugin 'tpope/vim-haml'
-	"Plugin 'tpope/vim-rails'
-	Plugin 'tpope/vim-markdown'
-	Plugin 'nelstrom/vim-markdown-folding'
-	"Plugin 'plasticboy/vim-markdown'
-	"Plugin 'uarun/vim-protobuf'
-	"Plugin 'Blackrush/vim-gocode'
-	"Plugin 'fatih/vim-go'
-	Plugin 'honza/dockerfile.vim'
-	Plugin 'elzr/vim-json'
-	"Plugin 'kchmck/vim-coffee-script'
-	Plugin 'jelera/vim-javascript-syntax'
-	Plugin 'pangloss/vim-javascript'
-	Plugin 'mxw/vim-jsx'		" depends on pangloss/vim-javascript
-	"Plugin 'LaTeX-Box-Team/LaTeX-Box'
-	Plugin 'groenewege/vim-less'
-	"Plugin 'evanmiller/nginx-vim-syntax'
-	"Plugin 'adimit/prolog.vim'
-	Plugin 'jimenezrick/vimerl'
-	Plugin 'elixir-lang/vim-elixir'
-	"Plugin 'mattreduce/vim-mix'
-	"Plugin 'carlosgaldino/elixir-snippets'
-	"Plugin 'digitaltoad/vim-jade'
-	"Plugin 'tclem/vim-arduino'
-	"Plugin 'sudar/vim-arduino-syntax'
-	"Plugin 'toyamarinyon/vim-swift'
-	"Plugin 'lukerandall/haskellmode-vim'
-	"Plugin 'enomsg/vim-haskellConcealPlus'
-	"Plugin 'derekwyatt/vim-scala'
+    " language specific
+    "Plugin 'tpope/vim-haml'
+    "Plugin 'tpope/vim-rails'
+    Plugin 'tpope/vim-markdown'
+    Plugin 'nelstrom/vim-markdown-folding'
+    "Plugin 'plasticboy/vim-markdown'
+    "Plugin 'uarun/vim-protobuf'
+    "Plugin 'Blackrush/vim-gocode'
+    "Plugin 'fatih/vim-go'
+    Plugin 'honza/dockerfile.vim'
+    Plugin 'elzr/vim-json'
+    "Plugin 'kchmck/vim-coffee-script'
+    Plugin 'jelera/vim-javascript-syntax'
+    Plugin 'pangloss/vim-javascript'
+    Plugin 'mxw/vim-jsx'        " depends on pangloss/vim-javascript
+    "Plugin 'LaTeX-Box-Team/LaTeX-Box'
+    Plugin 'groenewege/vim-less'
+    "Plugin 'evanmiller/nginx-vim-syntax'
+    "Plugin 'adimit/prolog.vim'
+    Plugin 'jimenezrick/vimerl'
+    Plugin 'elixir-lang/vim-elixir'
+    "Plugin 'mattreduce/vim-mix'
+    "Plugin 'carlosgaldino/elixir-snippets'
+    "Plugin 'digitaltoad/vim-jade'
+    "Plugin 'tclem/vim-arduino'
+    "Plugin 'sudar/vim-arduino-syntax'
+    "Plugin 'toyamarinyon/vim-swift'
+    "Plugin 'lukerandall/haskellmode-vim'
+    "Plugin 'enomsg/vim-haskellConcealPlus'
+    "Plugin 'derekwyatt/vim-scala'
 
-	" quick generation of HTML
-	"Plugin 'mattn/emmet-vim'
-	"Plugin 'gregsexton/MatchTag'
+    " quick generation of HTML
+    "Plugin 'mattn/emmet-vim'
+    "Plugin 'gregsexton/MatchTag'
 
-	" enchaned Vim operations
-	"Plugin 'tpope/vim-endwise'
-	"Plugin 'tpope/vim-surround'
-	"Plugin 'tpope/vim-speeddating'
-	"Plugin 'tpope/vim-repeat'
-	"Plugin 'tpope/vim-abolish'
-	"Plugin 'tommcdo/vim-exchange'
-	Plugin 'Lokaltog/vim-easymotion'		" improve vim movement
+    " enchaned Vim operations
+    "Plugin 'tpope/vim-endwise'
+    "Plugin 'tpope/vim-surround'
+    "Plugin 'tpope/vim-speeddating'
+    "Plugin 'tpope/vim-repeat'
+    "Plugin 'tpope/vim-abolish'
+    "Plugin 'tommcdo/vim-exchange'
+    Plugin 'Lokaltog/vim-easymotion'    " improve vim movement
 
-	"Plugin 'ap/vim-css-color'
-	"Plugin 'hail2u/vim-css3-syntax'
-	"Plugin 'jacekd/vim-iawriter'
-	"Plugin 'laktek/distraction-free-writing-vim'
-	Plugin 'kien/rainbow_parentheses.vim'
+    "Plugin 'ap/vim-css-color'
+    "Plugin 'hail2u/vim-css3-syntax'
+    "Plugin 'jacekd/vim-iawriter'
+    "Plugin 'laktek/distraction-free-writing-vim'
+    Plugin 'kien/rainbow_parentheses.vim'
 
-	" app integration
-	Plugin 'jpalardy/vim-slime'
-	Plugin 'tpope/vim-fugitive'
-	Plugin 'mhinz/vim-signify'
-	Plugin 'rking/ag.vim'		" The Silver Search - A better grep/ack
-	"Plugin 'mileszs/ack.vim'
-	"Plugin 'Valloric/YouCompleteMe'
-	Plugin 'wakatime/vim-wakatime'
-	"Plugin 'christoomey/vim-tmux-navigator'		" have tmux play nice with vim
-	"Plugin 'vim-scripts/LanguageTool'		" grammer checker
+    " app integration
+    Plugin 'jpalardy/vim-slime'
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'mhinz/vim-signify'
+    Plugin 'rking/ag.vim'       " The Silver Search - A better grep/ack
+    "Plugin 'mileszs/ack.vim'
+    "Plugin 'Valloric/YouCompleteMe'
+    Plugin 'wakatime/vim-wakatime'
+    "Plugin 'christoomey/vim-tmux-navigator'    " have tmux play nice with vim
+    "Plugin 'vim-scripts/LanguageTool'      " grammer checker
+    "Plugin 'editorconfig/editorconfig-vim'
 
-	" Dash Plugins, used for looking up documentation on OS X
-	"Plugin 'rizzatti/funcoo.vim'
-	"Plugin 'rizzatti/dash.vim'
+    " Dash Plugins, used for looking up documentation on OS X
+    "Plugin 'rizzatti/funcoo.vim'
+    "Plugin 'rizzatti/dash.vim'
 
-	" Snippets
-	Plugin 'SirVer/ultisnips'		" requires +python support
-	Plugin 'honza/vim-snippets'
+    " Snippets
+    Plugin 'SirVer/ultisnips'   " requires +python support
+    Plugin 'honza/vim-snippets'
 
-	" misc
-	"Plugin 'ehamberg/vim-cute-python'
-	Plugin 'bling/vim-airline'
-	"Plugin 'Townk/vim-autoclose'
-	Plugin 'Raimondi/delimitMate'
-	Plugin 'kien/ctrlp.vim'
-	Plugin 'majutsushi/tagbar'
-	Plugin 'scrooloose/nerdtree'
-	Plugin 'scrooloose/syntastic'
-	"Plugin 'spolu/dwm.vim'
-	Plugin 'tmhedberg/matchit'
-	"Plugin 'DrawIt'
-	Plugin 'godlygeek/tabular'
-	"Plugin 'terryma/vim-expand-region'
-	"Plugin 'triglav/vim-visual-increment'		" make visual C-A work properly
-	"Plugin 'ervandew/supertab'
+    " misc
+    "Plugin 'ehamberg/vim-cute-python'
+    Plugin 'bling/vim-airline'
+    "Plugin 'Townk/vim-autoclose'
+    Plugin 'Raimondi/delimitMate'
+    Plugin 'kien/ctrlp.vim'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'scrooloose/syntastic'
+    "Plugin 'spolu/dwm.vim'
+    Plugin 'tmhedberg/matchit'
+    "Plugin 'DrawIt'
+    Plugin 'godlygeek/tabular'
+    "Plugin 'terryma/vim-expand-region'
+    "Plugin 'triglav/vim-visual-increment'  " make visual C-A work properly
+    "Plugin 'ervandew/supertab'
 
-	call vundle#end()
+    call vundle#end()
 catch /E117:/
-	" Vundle is not available
+    " Vundle is not available
 endtry
 
-filetype plugin indent on		" required by Vundle
+filetype plugin indent on       " required by Vundle
 
 
 " ================ General config ================
@@ -169,7 +170,7 @@ set secure
 " ================ Environment setting ================
 if has("multi_byte")
   if &termencoding == ""
-	let &termencoding = &encoding
+    let &termencoding = &encoding
   endif
   set encoding=utf-8
   setglobal fileencoding=utf-8
@@ -194,6 +195,9 @@ syntax on                       " enable syntax highlighting
 
 
 " ================ Indentation ================
+set binary      " 'binary' must be set before expandtab
+set noeol       " Don’t add empty newlines at the end of files
+
 set autoindent
 set smartindent
 set smarttab
@@ -205,23 +209,23 @@ set shiftround
 
 
 " ================ Search options ================
-set hlsearch    " highlight searches
-set incsearch   " highlight dynamically as pattern is typed
-set ignorecase  " ignore case of searches
-set smartcase   " smart override 'ignorecase'
-set gdefault    " add the g flag to search/replace by default
+set hlsearch                    " highlight searches
+set incsearch                   " highlight dynamically as pattern is typed
+set ignorecase                  " ignore case of searches
+set smartcase                   " smart override 'ignorecase'
+set gdefault                    " add the g flag to search/replace by default
 
 
 " ================ Scrolling ================
-set scrolloff=3 " start scrolling when 3 lines away from margins
+set scrolloff=3                 " start scrolling when 3 lines away from margins
 "set sidescrolloff=10
 "set sidescroll=1
 
 
 " ================ Completion ================
 set wildmode=list:longest
-set wildmenu                " enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ " stuff to ignore when tab completing
+set wildmenu                    " enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~     " stuff to ignore when tab completing
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
@@ -259,11 +263,11 @@ map <Leader>r <esc>:NERDTreeFind<cr>"
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    :%s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 
@@ -277,10 +281,10 @@ let delimitMate_expand_cr = 1
 
 " ===== Rainbow parentheses
 if exists(':RainbowParenthesesToggle')
-	au VimEnter * RainbowParenthesesToggle
-	au Syntax * RainbowParenthesesLoadRound     " ()
-	au Syntax * RainbowParenthesesLoadSquare    " []
-	au Syntax * RainbowParenthesesLoadBraces    " {}
+    au VimEnter * RainbowParenthesesToggle
+    au Syntax * RainbowParenthesesLoadRound     " ()
+    au Syntax * RainbowParenthesesLoadSquare    " []
+    au Syntax * RainbowParenthesesLoadBraces    " {}
 endif
 
 " ===== airline config
@@ -293,23 +297,23 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "   * set guifont in .gvimrc
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 if g:airline_powerline_fonts != 1
-	" unicode symbols
-	let g:airline_left_sep = ''
-	let g:airline_right_sep = ''
-	"let g:airline_left_sep = '»'
-	"let g:airline_right_sep = '«'
-	"let g:airline_left_sep = '▶'
-	"let g:airline_right_sep = '◀'
-	"let g:airline_symbols.branch = '⎇'
-	let g:airline_symbols.branch = '⑂'
-	let g:airline_symbols.linenr = '␊'
-	"let g:airline_symbols.linenr = '␤'
-	"let g:airline_symbols.linenr = '¶'
-	"let g:airline_symbols.crypt = '🔒'
-	let g:airline_symbols.whitespace = 'Ξ'
+    " unicode symbols
+    let g:airline_left_sep = ''
+    let g:airline_right_sep = ''
+    "let g:airline_left_sep = '»'
+    "let g:airline_right_sep = '«'
+    "let g:airline_left_sep = '▶'
+    "let g:airline_right_sep = '◀'
+    "let g:airline_symbols.branch = '⎇'
+    let g:airline_symbols.branch = '⑂'
+    let g:airline_symbols.linenr = '␊'
+    "let g:airline_symbols.linenr = '␤'
+    "let g:airline_symbols.linenr = '¶'
+    "let g:airline_symbols.crypt = '🔒'
+    let g:airline_symbols.whitespace = 'Ξ'
 endif
 "let g:airline_left_alt_sep = '|'
 "let g:airline_right_alt_sep = '|''
@@ -347,15 +351,12 @@ set clipboard=unnamed
 set esckeys
 " Optimize for fast terminal connections
 set ttyfast
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
 
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+    set undodir=~/.vim/undo
 endif
 
 " Don’t create backups when editing files in certain directories
@@ -366,14 +367,14 @@ set shortmess=atI
 
 " Use relative line numbers
 "if exists("&relativenumber")
-	"set relativenumber
-	"au BufReadPost * set relativenumber
+    "set relativenumber
+    "au BufReadPost * set relativenumber
 "endif
 
 " Automatic commands
 "if has("autocmd")
-	" Enable file type detection
-	"filetype on
-	" Treat .md files as Markdown
-	"autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+    " Enable file type detection
+    "filetype on
+    " Treat .md files as Markdown
+    "autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 "endif
