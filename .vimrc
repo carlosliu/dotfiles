@@ -48,6 +48,7 @@ try
 	Plugin 'honza/dockerfile.vim'
 	Plugin 'elzr/vim-json'
 	"Plugin 'kchmck/vim-coffee-script'
+	Plugin 'jelera/vim-javascript-syntax'
 	Plugin 'pangloss/vim-javascript'
 	Plugin 'mxw/vim-jsx'		" depends on pangloss/vim-javascript
 	"Plugin 'LaTeX-Box-Team/LaTeX-Box'
@@ -71,12 +72,13 @@ try
 	"Plugin 'gregsexton/MatchTag'
 
 	" enchaned Vim operations
+	"Plugin 'tpope/vim-endwise'
 	"Plugin 'tpope/vim-surround'
 	"Plugin 'tpope/vim-speeddating'
 	"Plugin 'tpope/vim-repeat'
 	"Plugin 'tpope/vim-abolish'
 	"Plugin 'tommcdo/vim-exchange'
-	"Plugin 'Lokaltog/vim-easymotion'		" improve vim movement
+	Plugin 'Lokaltog/vim-easymotion'		" improve vim movement
 
 	"Plugin 'ap/vim-css-color'
 	"Plugin 'hail2u/vim-css3-syntax'
@@ -87,6 +89,7 @@ try
 	" app integration
 	Plugin 'jpalardy/vim-slime'
 	Plugin 'tpope/vim-fugitive'
+	Plugin 'mhinz/vim-signify'
 	Plugin 'rking/ag.vim'		" The Silver Search - A better grep/ack
 	"Plugin 'mileszs/ack.vim'
 	"Plugin 'Valloric/YouCompleteMe'
@@ -105,7 +108,8 @@ try
 	" misc
 	"Plugin 'ehamberg/vim-cute-python'
 	Plugin 'bling/vim-airline'
-	Plugin 'Townk/vim-autoclose'
+	"Plugin 'Townk/vim-autoclose'
+	Plugin 'Raimondi/delimitMate'
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'majutsushi/tagbar'
 	Plugin 'scrooloose/nerdtree'
@@ -265,6 +269,10 @@ noremap <leader>ss :call StripWhitespace()<CR>
 
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+
+" ===== delimitMate setting
+let delimitMate_expand_cr = 1
 
 
 " ===== Rainbow parentheses
