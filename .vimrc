@@ -48,7 +48,6 @@ try
     Plugin 'honza/dockerfile.vim'
     Plugin 'elzr/vim-json'
     "Plugin 'kchmck/vim-coffee-script'
-    Plugin 'jelera/vim-javascript-syntax'
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'        " depends on pangloss/vim-javascript
     "Plugin 'LaTeX-Box-Team/LaTeX-Box'
@@ -57,7 +56,7 @@ try
     "Plugin 'adimit/prolog.vim'
     Plugin 'jimenezrick/vimerl'
     Plugin 'elixir-lang/vim-elixir'
-    "Plugin 'mattreduce/vim-mix'
+    Plugin 'mattreduce/vim-mix'
     "Plugin 'carlosgaldino/elixir-snippets'
     "Plugin 'digitaltoad/vim-jade'
     "Plugin 'tclem/vim-arduino'
@@ -72,13 +71,16 @@ try
     "Plugin 'gregsexton/MatchTag'
 
     " enchaned Vim operations
-    "Plugin 'tpope/vim-endwise'
-    "Plugin 'tpope/vim-surround'
-    "Plugin 'tpope/vim-speeddating'
-    "Plugin 'tpope/vim-repeat'
     "Plugin 'tpope/vim-abolish'
+    Plugin 'tpope/vim-commentary'
+    Plugin 'tpope/vim-endwise'
+    "Plugin 'tpope/vim-repeat'
+    "Plugin 'tpope/vim-sensible'        " Sensible default vim setting
+    "Plugin 'tpope/vim-speeddating'
+    "Plugin 'tpope/vim-surround'
+    "Plugin 'tpope/vim-vinegar'
     "Plugin 'tommcdo/vim-exchange'
-    Plugin 'Lokaltog/vim-easymotion'    " improve vim movement
+    Plugin 'easymotion/vim-easymotion'  " improve vim movement
 
     "Plugin 'ap/vim-css-color'
     "Plugin 'hail2u/vim-css3-syntax'
