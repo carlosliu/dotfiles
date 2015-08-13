@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 sudo apt-get install build-essential linux-headers-amd64 \
 	git mercurial bison colordiff silversearcher-ag \
@@ -16,7 +16,7 @@ sudo apt-get install build-essential linux-headers-amd64 \
 	fonts-noto fonts-droid
 
 sudo apt-get install --no-install-recommends gpicview slim dbus-x11 \
-	lxterminal lxappearance lxrandr lxtask \
+    lxterminal lxappearance lxrandr lxtask
 
 
 # open-vm-tools open-vm-tools-dkms
