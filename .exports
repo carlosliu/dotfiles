@@ -24,3 +24,6 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+# Enable Docker setting if running
+eval $(boot2docker shellinit 2>/dev/null)
