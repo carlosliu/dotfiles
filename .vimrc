@@ -47,7 +47,7 @@ try
     "Plugin 'fatih/vim-go'
     Plugin 'honza/dockerfile.vim'
     Plugin 'elzr/vim-json'
-    "Plugin 'kchmck/vim-coffee-script'
+    Plugin 'kchmck/vim-coffee-script'
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'        " depends on pangloss/vim-javascript
     "Plugin 'LaTeX-Box-Team/LaTeX-Box'
@@ -344,6 +344,8 @@ let g:syntastic_auto_jump=0
 "let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
+
+let g:syntastic_javascript_checkers = [ 'eslint' ]
 
 
 
