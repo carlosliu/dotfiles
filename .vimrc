@@ -25,7 +25,7 @@ try
     call vundle#begin()
 
     " let Vundle manage Vundle (required!)
-    Plugin 'gmarik/Vundle.vim'
+    Plugin 'VundleVim/Vundle.vim'
 
     " colorschemes
     Plugin 'altercation/vim-colors-solarized'
@@ -183,7 +183,6 @@ endif
 if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
   set ambiwidth=double
 endif
-set shell=/usr/bin/env\ bash
 
 
 " ================ Color theme ================
