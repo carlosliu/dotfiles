@@ -93,12 +93,14 @@ try
     Plugin 'tpope/vim-fugitive'
     Plugin 'mhinz/vim-signify'
     Plugin 'rking/ag.vim'       " The Silver Search - A better grep/ack
+    "Plugin 'dyng/ctrlsf.vim'
     "Plugin 'mileszs/ack.vim'
     "Plugin 'Valloric/YouCompleteMe'
     Plugin 'wakatime/vim-wakatime'
     "Plugin 'christoomey/vim-tmux-navigator'    " have tmux play nice with vim
     "Plugin 'vim-scripts/LanguageTool'      " grammer checker
     "Plugin 'editorconfig/editorconfig-vim'
+    Plugin 'scrooloose/syntastic'
 
     " Dash Plugins, used for looking up documentation on OS X
     "Plugin 'rizzatti/funcoo.vim'
@@ -116,7 +118,6 @@ try
     Plugin 'kien/ctrlp.vim'
     Plugin 'majutsushi/tagbar'
     Plugin 'scrooloose/nerdtree'
-    Plugin 'scrooloose/syntastic'
     "Plugin 'spolu/dwm.vim'
     Plugin 'tmhedberg/matchit'
     "Plugin 'DrawIt'
