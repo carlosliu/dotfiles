@@ -42,7 +42,6 @@ brew install wget --with-iri
 #brew install narwhal
 
 # Install more recent versions of some OS X tools.
-#brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 #brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
@@ -82,10 +81,12 @@ brew install homebrew/dupes/screen
 
 # Install other useful binaries.
 brew install ack
+brew install ag
 #brew install dark-mode
 brew install exiv2
 brew install git
 brew install git-lfs
+brew install mercurial
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
@@ -103,6 +104,11 @@ brew install webkit2png
 # Install homebrew-rmtree, removing a formula and its unused dependencies
 brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 
+# Install more programming language
+brew install go
+brew install erlang
+brew install elixir
+
 # Install some of my favorite tools.
 brew install dos2unix
 brew install colordiff
@@ -113,16 +119,9 @@ brew install youtube-dl
 brew install multimarkdown
 brew install exiftool
 brew install ctags
-brew install ag
-
-# Install NVM
-# http://stackoverflow.com/questions/28017374/what-is-the-suggested-way-to-install-brew-node-js-io-js-nvm-npm-on-os-x
-# Note: don’t forget to running `nvm install stable`
-# and `nvm use stable` and `npm install -g npm@latest`
-brew install nvm
 
 # Install MacVim
-brew install macvim --override-system-vim
+brew install macvim --with-lua --override-system-vim
 
 #brew install caskroom/cask/brew-cask
 #brew cask install virtualbox
