@@ -25,11 +25,6 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null;
 done;
 
-# Add coreutils to path
-if which brew > /dev/null && [ -d "$(brew --prefix coreutils)/libexec/gnubin" ]; then
-    export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH";
-fi
-
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
@@ -57,12 +52,3 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # NVM environment
 export NVM_DIR="$HOME/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -r "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
-
-# Set Go environment
-if which brew > /dev/null && [ -d "$(brew --prefix go)/libexec/bin" ]; then
-    export GOROOT="$(brew --prefix go)/libexec/"
-    export PATH="$PATH:$GOROOT/bin"
-    export GOPATH=$HOME/Development/golang
-    export PATH="$PATH:$GOPATH/bin"
-fi
-
