@@ -123,10 +123,6 @@ brew install ctags
 # Install MacVim
 brew install macvim --with-lua --override-system-vim
 
-#brew install caskroom/cask/brew-cask
-#brew cask install virtualbox
-#brew install boot2docker docker docker-compose
-
 # Remove outdated versions from the cellar.
 brew cleanup
 
