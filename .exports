@@ -25,18 +25,30 @@ export MANPAGER='less -X';
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
 
-# Enable Docker setting if running
-eval $(boot2docker shellinit 2>/dev/null)
+# Enable docker dev enivronment
+$(which docker-machine > /dev/null) && eval "$(docker-machine env dev)"
+
+# NVM environment
+export NVM_DIR="$HOME/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -r "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+$(which npm > /dev/null) && source <(npm completion);
 
 # Add coreutils to path
-if which brew > /dev/null && [ -d "$(brew --prefix coreutils)/libexec/gnubin" ]; then
-    export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH";
+if which brew > /dev/null; then
+    brew_prefix_coreutils="$(brew --prefix coreutils)"
+    [ -d "$brew_prefix_coreutils/libexec/gnubin" ] && export PATH="$brew_prefix_coreutils/libexec/gnubin:$PATH";
+    export MANPATH="$brew_prefix_coreutils/libexec/gnuman:$MANPATH";
+    unset brew_prefix_coreutils
 fi
 
 # Set Go environment
-if which brew > /dev/null && [ -d "$(brew --prefix go)/libexec/bin" ]; then
-    export GOROOT="$(brew --prefix go)/libexec/"
-    export PATH="$PATH:$GOROOT/bin"
-    export GOPATH=$HOME/Development/golang
-    export PATH="$PATH:$GOPATH/bin"
+if which brew > /dev/null; then
+    brew_prefix_go="$(brew --prefix go)"
+    if [ -d "$brew_prefix_go/libexec/bin" ]; then
+        export GOROOT="$brew_prefix_go/libexec/"
+        export PATH="$PATH:$GOROOT/bin"
+        export GOPATH=$HOME/Development/golang
+        export PATH="$PATH:$GOPATH/bin"
+    fi
+    unset brew_prefix_go
 fi
