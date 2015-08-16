@@ -153,9 +153,9 @@ set backspace=indent,eol,start  " allow backspace in insert mode
 
 " Show “invisible” characters
 set list listchars=tab:⇥\ ,trail:␣,eol:↩,nbsp:␣,extends:…,precedes:…
+set list!                       " do not show “invisible” characters by default 
 """set list listchars=trail:·,tab:»·
 """set list listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list!
 
 " Keep longer history for commands and serach patterns
 set history=1000
@@ -215,7 +215,6 @@ set hlsearch                    " highlight searches
 set incsearch                   " highlight dynamically as pattern is typed
 set ignorecase                  " ignore case of searches
 set smartcase                   " smart override 'ignorecase'
-set gdefault                    " add the g flag to search/replace by default
 
 
 " ================ Scrolling ================
@@ -368,6 +367,14 @@ set backupskip=/tmp/*,/private/tmp/*
 
 " Don’t show the intro message when starting Vim
 set shortmess=atI
+
+if has("autocmd")
+    " When editing a file, always jump to the last known cursor position.
+    autocmd BufReadPost *
+                \ if line("'\"") > 1 && line("'\"") <= line("$") |
+                \   exe "normal! g`\"" |
+                \ endif
+endif
 
 " Use relative line numbers
 "if exists("&relativenumber")
