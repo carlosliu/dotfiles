@@ -140,6 +140,3 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
-
-# Import docker dev environment
-command -v docker-machine > /dev/null && alias dockerdev="eval $(docker-machine env dev)"
