@@ -104,11 +104,6 @@ brew install webkit2png
 # Install homebrew-rmtree, removing a formula and its unused dependencies
 brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 
-# Install more programming language
-brew install go
-brew install erlang
-brew install elixir
-
 # Install some of my favorite tools.
 brew install dos2unix
 brew install colordiff
@@ -119,6 +114,12 @@ brew install youtube-dl
 brew install multimarkdown
 brew install exiftool
 brew install ctags
+brew install cscope
+
+# Install more programming language
+brew install go
+brew install erlang
+brew install elixir
 
 # Install MacVim
 brew install macvim --with-lua --override-system-vim
