@@ -86,7 +86,7 @@ try
     "Plugin 'hail2u/vim-css3-syntax'
     "Plugin 'jacekd/vim-iawriter'
     "Plugin 'laktek/distraction-free-writing-vim'
-    Plugin 'kien/rainbow_parentheses.vim'
+    Plugin 'luochen1990/rainbow'
 
     " app integration
     Plugin 'jpalardy/vim-slime'
@@ -153,7 +153,7 @@ set backspace=indent,eol,start  " allow backspace in insert mode
 
 " Show “invisible” characters
 set list listchars=tab:⇥\ ,trail:␣,eol:↩,nbsp:␣,extends:…,precedes:…
-set list!                       " do not show “invisible” characters by default 
+set list!                       " do not show “invisible” characters by default
 """set list listchars=trail:·,tab:»·
 """set list listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
 
@@ -279,14 +279,8 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " ===== delimitMate setting
 let delimitMate_expand_cr = 1
 
-
 " ===== Rainbow parentheses
-if exists(':RainbowParenthesesToggle')
-    au VimEnter * RainbowParenthesesToggle
-    au Syntax * RainbowParenthesesLoadRound     " ()
-    au Syntax * RainbowParenthesesLoadSquare    " []
-    au Syntax * RainbowParenthesesLoadBraces    " {}
-endif
+let g:rainbow_active = 1
 
 " ===== airline config
 " Enable the list of buffers

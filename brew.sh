@@ -99,7 +99,7 @@ brew install speedtest_cli
 brew install ssh-copy-id
 brew install tree
 brew install webkit2png
-#brew install zopfli
+brew install zopfli
 
 # Install homebrew-rmtree, removing a formula and its unused dependencies
 brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
