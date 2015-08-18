@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Install command-line tools using Homebrew.
 
@@ -17,7 +17,6 @@ brew upgrade --all
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -120,6 +119,15 @@ brew install cscope
 brew install go
 brew install erlang
 brew install elixir
+
+# Install Homebrew Cask
+brew install caskroom/cask/brew-cask
+
+# Install Karabiner
+brew cask install karabiner
+
+# Install Emacs For Mac OS X from http://emacsformacosx.com
+brew cask install --appdir=/Applications emacs
 
 # Install MacVim
 brew install macvim --with-lua --override-system-vim

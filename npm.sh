@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 npm install -g npm@latest
 npm install -g jshint eslint

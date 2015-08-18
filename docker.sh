@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 brew install caskroom/cask/brew-cask
 brew cask install virtualbox

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 sudo apt-get install build-essential linux-headers-amd64 \
 	git mercurial bison colordiff silversearcher-ag \

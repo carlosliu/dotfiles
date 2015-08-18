@@ -103,11 +103,14 @@ try
     Plugin 'scrooloose/syntastic'
 
     " Dash Plugins, used for looking up documentation on OS X
-    "Plugin 'rizzatti/funcoo.vim'
-    "Plugin 'rizzatti/dash.vim'
+    if g:OS == 'osx'
+        Plugin 'rizzatti/dash.vim'
+    endif
 
     " Snippets
-    Plugin 'SirVer/ultisnips'   " requires +python support
+    if v:version >= 704
+        Plugin 'SirVer/ultisnips'   " requires +python support
+    endif
     Plugin 'honza/vim-snippets'
 
     " misc

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 apm install \
 	Sublime-Style-Column-Selection atom-beautify block-comment \

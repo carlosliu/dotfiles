@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -x "/Applications/Emacs.app/Contents/MacOS/Emacs" ]; then
+    /Applications/Emacs.app/Contents/MacOS/Emacs "$@";
+elif [ -x "$HOME/Applications/Emacs.app/Contents/MacOS/Emacs" ]; then
+    $HOME/Applications/Emacs.app/Contents/MacOS/Emacs "$@";
+elif [ -x /usr/bin/emacs ]; then
+    /usr/bin/emacs "$@";
+else
+    echo "No emacs found!";
+    return 1;
+fi
