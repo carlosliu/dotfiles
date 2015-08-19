@@ -104,6 +104,7 @@ brew install zopfli
 brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 
 # Install some of my favorite tools.
+brew install ascii
 brew install dos2unix
 brew install colordiff
 brew install tmux
@@ -119,15 +120,6 @@ brew install cscope
 brew install go
 brew install erlang
 brew install elixir
-
-# Install Homebrew Cask
-brew install caskroom/cask/brew-cask
-
-# Install Karabiner
-brew cask install karabiner
-
-# Install Emacs For Mac OS X from http://emacsformacosx.com
-brew cask install --appdir=/Applications emacs
 
 # Install MacVim
 brew install macvim --with-lua --override-system-vim
