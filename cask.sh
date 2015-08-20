@@ -13,7 +13,6 @@ apps=(
   # hazel
   # sublime-text3
   atom
-  emacs                     # Emacs from http://emacsformacosx.com
   nvalt
   textwrangler
   coteditor

@@ -83,6 +83,7 @@ brew install ack
 brew install ag
 #brew install dark-mode
 brew install exiv2
+brew install hub            # GitHub CLI tools
 brew install git
 brew install git-lfs
 brew install mercurial
@@ -110,6 +111,7 @@ brew install colordiff
 brew install tmux
 brew install mmv
 brew install ffmpeg
+brew install trash          # move to trash on CLI
 brew install youtube-dl
 brew install multimarkdown
 brew install exiftool
@@ -123,6 +125,9 @@ brew install elixir
 
 # Install MacVim
 brew install macvim --with-lua --override-system-vim
+
+# Install Emacs
+brew install emacs --with-cocoa
 
 # Remove outdated versions from the cellar.
 brew cleanup
