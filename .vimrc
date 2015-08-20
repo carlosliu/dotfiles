@@ -3,7 +3,7 @@
 set nocompatible
 
 
-" determine the OS and Computer
+" Determine the OS and Computer
 if has("win32")
     let g:OS = 'windows'
 elseif has("unix")
@@ -175,17 +175,17 @@ set secure
 
 " ================ Environment setting ================
 if has("multi_byte")
-  if &termencoding == ""
-    let &termencoding = &encoding
-  endif
-  set encoding=utf-8
-  setglobal fileencoding=utf-8
-  "setglobal bomb
-  set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-  set nobomb
+    if &termencoding == ""
+        let &termencoding = &encoding
+    endif
+    set encoding=utf-8
+    setglobal fileencoding=utf-8
+    "setglobal bomb
+    set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+    set nobomb
 endif
 if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
-  set ambiwidth=double
+    set ambiwidth=double
 endif
 
 
@@ -222,7 +222,6 @@ set smartcase                   " smart override 'ignorecase'
 
 " ================ Scrolling ================
 set scrolloff=3                 " start scrolling when 3 lines away from margins
-"set sidescrolloff=10
 "set sidescroll=1
 
 
@@ -366,23 +365,27 @@ set backupskip=/tmp/*,/private/tmp/*
 set shortmess=atI
 
 if has("autocmd")
-    " When editing a file, always jump to the last known cursor position.
-    autocmd BufReadPost *
-                \ if line("'\"") > 1 && line("'\"") <= line("$") |
-                \   exe "normal! g`\"" |
-                \ endif
-endif
+    augroup load_vim
+        autocmd!
+        " Use relative line numbers
+        if exists("&relativenumber")
+            set relativenumber
+            au BufReadPost * set relativenumber
+        endif
+        " When editing a file, always jump to the last known cursor position
+        autocmd BufReadPost *
+                    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+                    \   exe "normal! g`\"" |
+                    \ endif
+        " Auto reload VIM configuration after saving
+        " http://stackoverflow.com/a/2403926
+        autocmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC |
+                    \ if has('gui_running') | so $MYGVIMRC | endif
+    augroup END
 
-" Use relative line numbers
-"if exists("&relativenumber")
-    "set relativenumber
-    "au BufReadPost * set relativenumber
-"endif
-
-" Automatic commands
-"if has("autocmd")
     " Enable file type detection
     "filetype on
+
     " Treat .md files as Markdown
     "autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-"endif
+endif " has("autocmd")

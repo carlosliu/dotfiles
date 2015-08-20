@@ -10,7 +10,7 @@ if has("gui_running")
     set go-=R               " no scrollbar even if split
 
     " Use the Solarized Dark theme
-    colorscheme monokai
+    colorscheme molokai
 
     " Don’t blink cursor in normal mode
     set guicursor=n:blinkon0
