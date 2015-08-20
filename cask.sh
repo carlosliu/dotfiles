@@ -5,45 +5,48 @@ brew install caskroom/cask/brew-cask
 
 # Apps
 apps=(
-  alfred
-  dropbox
   1password
-  google-chrome
-  firefox
-  # qlcolorcode
-  slack
-  gitter
-  appcleaner
-  # qlmarkdown
-  karabiner
-  # seil
-  # spotify
-  # vagrant
-  iterm2
-  # qlprettypatch
-  # shiori
-  atom
+  alfred
+  keycue
+  # mou
+  # arq
+  # hazel
   # sublime-text3
+  atom
   emacs                     # Emacs from http://emacsformacosx.com
   nvalt
   textwrangler
   coteditor
-  # flux
-  # mailbox
+  # qlcolorcode
+  # qlmarkdown
+  # qlprettypatch
   # qlstephen
-  # sketch
-  vlc
-  mplayerx
-  # cloudup
   # quicklook-json
+  appcleaner
+  # day-o                   # only Mavericks
+  # itsycal                 # Yosemite+
+  iterm2
+  menumeters
+  karabiner
+  # seil
+  dropbox
+  google-chrome
+  firefox
+  opera
+  slack
+  gitter
   skype
   transmission
-  # arq
-  # hazel
+  # spotify
+  vlc
+  mplayerx
+  # vagrant
+  # flux
+  # sketch
+  # cloudup
   # screenflick
   # tower
   # transmit
-  keycue
 )
 
 # Install apps to /Applications
@@ -52,4 +55,4 @@ echo "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
 # Install Font Cask
-brew tap caskroom/fonts 
+brew tap caskroom/fonts
