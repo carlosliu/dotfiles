@@ -34,6 +34,7 @@ try
     "Plugin 'tpope/vim-vividchalk'
     Plugin 'tomasr/molokai'
     "Plugin 'nelstrom/vim-mac-classic-theme'
+    Plugin 'jnurmine/Zenburn'
     Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
     " language specific
@@ -65,24 +66,27 @@ try
     "Plugin 'lukerandall/haskellmode-vim'
     "Plugin 'enomsg/vim-haskellConcealPlus'
     "Plugin 'derekwyatt/vim-scala'
+    "Plugin 'rust-lang/rust.vim'
 
     " quick generation of HTML
     "Plugin 'mattn/emmet-vim'
     "Plugin 'gregsexton/MatchTag'
+    "Plugin 'Valloric/MatchTagAlways'
 
     " enchaned Vim operations
+    "Plugin 'tpope/vim-sensible'        " Sensible default vim setting
     "Plugin 'tpope/vim-abolish'
     Plugin 'tpope/vim-commentary'
     Plugin 'tpope/vim-endwise'
-    "Plugin 'tpope/vim-repeat'
-    "Plugin 'tpope/vim-sensible'        " Sensible default vim setting
-    "Plugin 'tpope/vim-speeddating'
-    "Plugin 'tpope/vim-surround'
+    Plugin 'tpope/vim-repeat'
+    Plugin 'tpope/vim-speeddating'
+    Plugin 'tpope/vim-surround'
     "Plugin 'tpope/vim-vinegar'
+    "Plugin 'tpope/vim-projectionist'
     "Plugin 'tommcdo/vim-exchange'
-    Plugin 'easymotion/vim-easymotion'  " improve vim movement
+    "Plugin 'easymotion/vim-easymotion'  " improve vim movement
 
-    "Plugin 'ap/vim-css-color'
+    Plugin 'ap/vim-css-color'
     "Plugin 'hail2u/vim-css3-syntax'
     "Plugin 'jacekd/vim-iawriter'
     "Plugin 'laktek/distraction-free-writing-vim'
@@ -191,7 +195,7 @@ endif
 
 " ================ Color theme ================
 set background=dark
-colorscheme dracula
+colorscheme zenburn
 "colorscheme solarized
 "let g:solarized_termtrans=1
 "colorscheme jellybeans
@@ -240,6 +244,7 @@ set wildignore+=*.pyc,*.pyo
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.wav,*.mp3,*.ogg
 set wildignore+=*.swp,*.bak
 
 
@@ -247,12 +252,15 @@ set wildignore+=*.swp,*.bak
 " Change mapleader
 let mapleader=","
 
+" Toggle paste mode
+nmap <leader>p :set paste!<CR>
+
 " Toggle `set list` to show invisible chars
 nmap <leader>l :set list!<CR>
 
 " clear search highlights easily
 "nmap <silent> <leader>/ :let @/=""<CR>
-nmap <leader>/ :nohl<CR>
+nmap <leader>/ :nohlsearch<CR>
 
 """ Coffee Script Compilation
 " Compile the current file into a vertcally split screen
@@ -277,12 +285,36 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+" Bind j/k to move down/up by one screen row, not linewise
+nnoremap j gj
+nnoremap k gk
+
+" Emacs style keybinding on command line
+cnoremap <C-a>  <Home>
+cnoremap <C-b>  <Left>
+cnoremap <C-f>  <Right>
+cnoremap <C-d>  <Delete>
+cnoremap <M-b>  <S-Left>
+cnoremap <M-f>  <S-Right>
+cnoremap <M-d>  <S-right><Delete>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
+cnoremap <Esc>d <S-right><Delete>
+cnoremap <C-g>  <C-c>
 
 " ===== delimitMate setting
 let delimitMate_expand_cr = 1
 
 " ===== Rainbow parentheses
 let g:rainbow_active = 1
+
+" ===== CtrlP setting
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
 
 " ===== airline config
 " Enable the list of buffers

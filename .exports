@@ -40,9 +40,9 @@ if which brew > /dev/null; then
     # Set Go environment
     brew_prefix_go="$(brew --prefix go)"
     if [ -d "$brew_prefix_go/libexec/bin" ]; then
-        export GOROOT="$brew_prefix_go/libexec/"
+        export GOROOT="$brew_prefix_go/libexec"
         export PATH="$PATH:$GOROOT/bin"
-        export GOPATH=$HOME/Development/golang
+        export GOPATH="$HOME/Development/golang"
         export PATH="$PATH:$GOPATH/bin"
     fi
     unset brew_prefix_go
