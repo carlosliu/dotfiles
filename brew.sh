@@ -81,7 +81,6 @@ brew install homebrew/dupes/screen
 # Install other useful binaries.
 brew install ack
 brew install ag
-#brew install dark-mode
 brew install exiv2
 brew install hub            # GitHub CLI tools
 brew install git
@@ -117,6 +116,7 @@ brew install multimarkdown
 brew install exiftool
 brew install ctags
 brew install cscope
+brew install aspell --with-lang=en
 
 # Install more programming language
 brew install go
