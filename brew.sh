@@ -122,6 +122,9 @@ brew install aspell --with-lang=en
 brew install go
 brew install erlang
 brew install elixir
+brew install scala
+brew install leiningen
+brew install clojurescript
 
 # Install MacVim
 brew install macvim --with-lua --override-system-vim

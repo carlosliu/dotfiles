@@ -9,6 +9,7 @@ apps=(
     alfred
     keycue
     mou
+    java
     atom
     nvalt
     textwrangler
