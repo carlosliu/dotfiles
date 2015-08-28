@@ -195,7 +195,7 @@ endif
 
 " ================ Color theme ================
 set background=dark
-colorscheme zenburn
+colorscheme dracula
 "colorscheme solarized
 "let g:solarized_termtrans=1
 "colorscheme jellybeans

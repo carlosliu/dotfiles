@@ -5,7 +5,7 @@ npm install -g coffee-script coffeelint
 npm install -g jshint jsonlint csslint js-yaml eslint
 npm install -g babel-eslint eslint-plugin-react
 npm install -g eslint-plugin-angular eslint-config-angular
-npm install -g tern gulp
+npm install -g tern gulp less
 
 if [[ -f $HOME/github/typescript-tools/package.json ]]; then
     cd $HOME/github/typescript-tools;
