@@ -7,7 +7,7 @@ apm install \
     editor-stats editorconfig \
     file-icons gist-it git-blame git-plus \
     highlight-line highlight-selected last-cursor-position \
-    minimap minimap-find-and-replace pigments term2 wakatime
+    minimap minimap-find-and-replace pigments term2 vim-mode wakatime
 
 
 apm install \
