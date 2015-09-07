@@ -302,6 +302,9 @@ cnoremap <Esc>f <S-Right>
 cnoremap <Esc>d <S-right><Delete>
 cnoremap <C-g>  <C-c>
 
+" ===== vim-json customize
+let g:vim_json_syntax_conceal = 0
+
 " ===== delimitMate setting
 let delimitMate_expand_cr = 1
 
