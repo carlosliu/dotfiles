@@ -11,15 +11,13 @@ apm install \
     minimap minimap-find-and-replace pigments term2 wakatime
 
 apm install \
-     vim-mode ex-mode vim-surround
-
-apm install \
-    atom-typescript emmet \
-    angularjs angularjs-styleguide-snippets \
-    javascript-snippets jquery-snippets \
-    react \
+    atom-typescript emmet react \
+    angularjs angularjs-styleguide-snippets jquery-snippets \
     linter linter-coffeelint linter-csslint linter-eslint \
     go-plus language-docker language-elixir language-erlang
 
+apm install atom-material-ui batman-syntax monokai
 
-apm install atom-material-ui batman-syntax dracula-theme monokai
+apm install vim-mode ex-mode vim-surround
+
+# apm install javascript-snippets dracula-theme
