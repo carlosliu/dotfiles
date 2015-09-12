@@ -3,11 +3,11 @@
 apm install \
     Sublime-Style-Column-Selection \
     atom-alignment atom-beautify atom-fuzzy-grep autoclose-html \
-    block-comment \
+    block-comment cursor-history \
     color-picker command-logger dash disable-keybindings docblockr \
     editor-stats editorconfig \
-    file-icons gist-it git-blame git-plus \
-    highlight-column highlight-line highlight-selected last-cursor-position \
+    file-icons gist-it git-blame git-plus open-on-github \
+    highlight-column highlight-line highlight-selected \
     minimap minimap-find-and-replace pigments term2 wakatime
 
 apm install \
