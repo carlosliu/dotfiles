@@ -11,7 +11,7 @@ apm install \
     minimap minimap-find-and-replace pigments term2 wakatime
 
 apm install \
-    atom-typescript emmet react \
+    atom-typescript react \
     angularjs angularjs-styleguide-snippets jquery-snippets \
     linter linter-coffeelint linter-csslint linter-eslint linter-jshint \
     go-plus language-docker language-elixir language-erlang
