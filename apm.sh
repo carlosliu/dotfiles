@@ -2,19 +2,24 @@
 
 apm install \
     Sublime-Style-Column-Selection \
-    atom-alignment atom-beautify atom-fuzzy-grep block-comment \
+    atom-alignment atom-beautify atom-fuzzy-grep autoclose-html \
+    block-comment \
     color-picker command-logger dash disable-keybindings docblockr \
     editor-stats editorconfig \
     file-icons gist-it git-blame git-plus \
-    highlight-line highlight-selected last-cursor-position \
-    minimap minimap-find-and-replace pigments term2 vim-mode wakatime
-
+    highlight-column highlight-line highlight-selected last-cursor-position \
+    minimap minimap-find-and-replace pigments term2 wakatime
 
 apm install \
-    emmet javascript-snippets jquery-snippets \
-    atom-typescript angularjs react \
+     vim-mode ex-mode vim-surround
+
+apm install \
+    atom-typescript emmet \
+    angularjs angularjs-styleguide-snippets \
+    javascript-snippets jquery-snippets \
+    react \
     linter linter-coffeelint linter-csslint linter-eslint \
     go-plus language-docker language-elixir language-erlang
 
 
-apm install dracula-theme monokai
+apm install atom-material-ui batman-syntax dracula-theme monokai
