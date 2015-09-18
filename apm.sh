@@ -2,6 +2,7 @@
 
 apm install \
     Sublime-Style-Column-Selection \
+    advanced-open-file AtomicChar\
     atom-alignment atom-beautify atom-fuzzy-grep autoclose-html \
     block-comment cursor-history \
     color-picker command-logger dash disable-keybindings docblockr \
@@ -9,7 +10,8 @@ apm install \
     gist-it git-blame git-plus open-on-github \
     highlight-column highlight-line highlight-selected \
     minimap minimap-find-and-replace \
-    open-recent project-manager pigments term2 wakatime zentabs
+    open-recent project-manager pigments term2 \
+    tree-view-open-files wakatime zentabs
 
 apm install \
     atom-typescript react \
