@@ -4,21 +4,22 @@ apm install \
     Sublime-Style-Column-Selection \
     advanced-open-file AtomicChar\
     atom-alignment atom-beautify atom-fuzzy-grep autoclose-html \
-    block-comment cursor-history \
-    color-picker command-logger dash disable-keybindings docblockr \
+    block-comment calc color-picker command-logger cursor-history \
+    dash disable-keybindings docblockr \
     editor-stats editorconfig file-icons \
-    gist-it git-blame git-plus open-on-github \
-    highlight-column highlight-line highlight-selected \
+    highlight-column highlight-line highlight-selected marked \
     minimap minimap-find-and-replace \
-    open-recent project-manager pigments term2 \
+    open-recent pigments project-manager script term2 \
     tree-view-open-files wakatime zentabs
 
 apm install \
     atom-typescript react \
     angularjs angularjs-styleguide-snippets jquery-snippets \
     atom-bootstrap3 underscorejs-snippets \
-    linter linter-coffeelint linter-csslint linter-eslint linter-jshint \
-    go-plus language-docker language-elixir language-erlang
+    go-plus language-docker language-elixir language-erlang \
+    linter linter-coffeelint linter-csslint linter-eslint linter-jshint
+
+apm install gist-it git-blame git-plus merge-conflicts open-on-github
 
 apm install atom-material-ui batman-syntax monokai
 
