@@ -9,17 +9,17 @@ apm install \
     editor-stats editorconfig file-icons \
     highlight-column highlight-line highlight-selected marked \
     minimap minimap-find-and-replace \
-    open-recent pigments project-manager script term2 \
-    tree-view-open-files wakatime zentabs
+    open-recent pigments project-manager script sort-lines term2 \
+    tree-view-open-files toggle-quotes wakatime zentabs
 
 apm install \
-    atom-typescript react \
+    atom-typescript autoprefixer node-debugger react \
     angularjs angularjs-styleguide-snippets jquery-snippets \
     atom-bootstrap3 underscorejs-snippets \
     go-plus language-docker language-elixir language-erlang \
     linter linter-coffeelint linter-csslint linter-eslint linter-jshint
 
-apm install gist-it git-blame git-plus merge-conflicts open-on-github
+apm install gist-it git-blame git-log git-plus merge-conflicts
 
 apm install atom-material-ui batman-syntax monokai
 
