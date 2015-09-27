@@ -10,4 +10,5 @@
 #   editor.onDidSave ->
 #     console.log "Saved! #{editor.getPath()}"
 
-process.env.PATH = ['~/bin', '/usr/local/bin', process.env.PATH].join(":")
+process.env.PATH =
+  [process.env.HOME+'/bin', '/usr/local/bin', process.env.PATH].join(":")
