@@ -11,6 +11,7 @@ apps=(
     mou
     java
     atom
+    visual-studio-code
     nvalt
     textwrangler
     coteditor
@@ -28,6 +29,7 @@ apps=(
     transmission
     vlc
     mplayerx
+    adobe-reader
 )
 # arq
 # hazel
