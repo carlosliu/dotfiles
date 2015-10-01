@@ -30,6 +30,7 @@ apps=(
     vlc
     mplayerx
     adobe-reader
+    squirrel
 )
 # arq
 # hazel
