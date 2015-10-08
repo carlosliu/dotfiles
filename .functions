@@ -198,7 +198,7 @@ function getcertnames() {
 }
 
 # `code` opens Visual Studio Code
-function code() {
+function vscode() {
     VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
 }
 

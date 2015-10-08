@@ -3,7 +3,7 @@
 # To install NVM
 # git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
 
-npm install -g npm@latest
+# npm install -g npm@latest
 
 npm install -g coffee-script typescript
 npm install -g http-server live-server
@@ -14,7 +14,7 @@ npm install -g babel-eslint
 npm install -g eslint-plugin-react
 npm install -g eslint-plugin-angular eslint-config-angular
 
-npm install -g gulp gulp-cli karma karma-cli
+npm install -g gulp-cli karma-cli
 npm install -g bower webpack browserify watchify
 
 npm install -g js-beautify typescript-formatter
