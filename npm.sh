@@ -14,8 +14,8 @@ npm install -g babel-eslint
 npm install -g eslint-plugin-react
 npm install -g eslint-plugin-angular eslint-config-angular
 
-npm install -g gulp-cli karma-cli
-npm install -g bower webpack browserify watchify
+npm install -g gulp-cli grunt-cli karma-cli
+npm install -g bower webpack browserify watchify yo
 
 npm install -g js-beautify typescript-formatter
 
