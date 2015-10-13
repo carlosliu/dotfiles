@@ -14,10 +14,10 @@ npm install -g babel-eslint
 npm install -g eslint-plugin-react
 npm install -g eslint-plugin-angular eslint-config-angular
 
-npm install -g gulp-cli grunt-cli karma-cli
-npm install -g bower webpack browserify watchify yo
+npm install -g gulp-cli grunt-cli karma-cli protractor
+npm install -g bower webpack webpack-dev-server browserify watchify yo
 
-npm install -g js-beautify typescript-formatter
+npm install -g js-beautify typescript-formatter caniuse-cmd
 
 # if [[ -f $HOME/github/typescript-tools/package.json ]]; then
 #     cd $HOME/github/typescript-tools;
