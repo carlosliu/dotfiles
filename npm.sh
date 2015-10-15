@@ -15,7 +15,8 @@ npm install -g eslint-plugin-react
 npm install -g eslint-plugin-angular eslint-config-angular
 
 npm install -g gulp-cli grunt-cli karma-cli protractor
-npm install -g bower webpack webpack-dev-server browserify watchify yo
+npm install -g webpack webpack-dev-server browserify watchify
+npm install -g bower jspm yo
 
 npm install -g js-beautify typescript-formatter caniuse-cmd
 
