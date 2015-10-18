@@ -120,6 +120,7 @@ brew install exiftool
 brew install ctags
 brew install cscope
 brew install aspell --with-lang-en
+brew install mp3info
 
 # Install more programming language
 brew install go
