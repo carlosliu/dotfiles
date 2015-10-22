@@ -51,6 +51,7 @@ try
     Plugin 'kchmck/vim-coffee-script'
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'        " depends on pangloss/vim-javascript
+    Plugin 'leafgarland/typescript-vim'
     "Plugin 'LaTeX-Box-Team/LaTeX-Box'
     Plugin 'groenewege/vim-less'
     "Plugin 'evanmiller/nginx-vim-syntax'
