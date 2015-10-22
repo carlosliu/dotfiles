@@ -85,12 +85,11 @@ brew install homebrew/dupes/screen
 brew install ack
 brew install ag
 brew install exiv2
-brew install hub            # GitHub CLI tools
 brew install git
 brew install git-lfs
+brew install hub            # GitHub CLI tools
 brew install mercurial
 brew install imagemagick #--with-webp
-brew install lua
 brew install lynx
 brew install p7zip
 brew install pigz
@@ -119,22 +118,26 @@ brew install multimarkdown
 brew install exiftool
 brew install ctags
 brew install cscope
-brew install aspell --with-lang-en
 brew install mp3info
 
 # Install more programming language
 brew install go
+brew install lua
 brew install erlang
 brew install elixir
 brew install scala
 brew install leiningen
 brew install clojurescript
 
+# Install MongoDB
+brew install mongodb
+
 # Install MacVim
 brew install macvim --with-lua --override-system-vim
 
 # Install Emacs
-brew install emacs --with-cocoa
+# brew install emacs --with-cocoa
+# brew install aspell --with-lang-en
 
 # Remove outdated versions from the cellar.
 brew cleanup
