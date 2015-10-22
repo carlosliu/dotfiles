@@ -6,7 +6,7 @@
 # npm install -g npm@latest
 
 npm install -g coffee-script typescript
-npm install -g http-server live-server
+npm install -g http-server live-server nodemon
 npm install -g less tsd tern
 
 npm install -g jshint jsonlint csslint js-yaml eslint coffeelint
