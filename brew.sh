@@ -118,6 +118,8 @@ brew install multimarkdown
 brew install exiftool
 brew install ctags
 brew install cscope
+brew install clang-format
+brew install uncrustify
 brew install mp3info
 
 # Install more programming language

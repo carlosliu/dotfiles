@@ -3,7 +3,7 @@
 # To install NVM
 # git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
 
-# npm install -g npm@latest
+npm install -g npm@latest
 
 npm install -g coffee-script typescript
 npm install -g http-server live-server nodemon

@@ -1,10 +1,9 @@
 #!/bin/sh
 
 apm install \
-    Sublime-Style-Column-Selection \
-    advanced-open-file AtomicChar\
-    atom-alignment atom-beautify atom-fuzzy-grep autoclose-html \
-    block-comment calc color-picker command-logger cursor-history \
+    Sublime-Style-Column-Selection advanced-open-file \
+    atom-alignment atom-beautify atom-fuzzy-grep autoclose-html block-comment \
+    calc clang-format color-picker command-logger cursor-history \
     dash disable-keybindings docblockr \
     editor-stats editorconfig file-icons \
     highlight-column highlight-line highlight-selected marked \
