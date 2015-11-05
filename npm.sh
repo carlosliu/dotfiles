@@ -5,7 +5,7 @@
 
 npm install -g npm@latest
 
-npm install -g coffee-script typescript
+npm install -g babel coffee-script typescript
 npm install -g http-server live-server nodemon
 npm install -g less tsd tern
 
