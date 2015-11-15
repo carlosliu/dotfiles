@@ -46,7 +46,7 @@ brew install wget --with-iri
 # Install more recent versions of some OS X tools.
 brew install homebrew/dupes/grep
 #brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+#brew install homebrew/dupes/screen
 #brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
@@ -87,6 +87,7 @@ brew install ag
 brew install exiv2
 brew install git
 brew install git-lfs
+brew install tig
 brew install hub            # GitHub CLI tools
 brew install mercurial
 brew install imagemagick #--with-webp
@@ -109,6 +110,7 @@ brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 brew install ascii
 brew install dos2unix
 brew install colordiff
+brew install htop
 brew install tmux
 brew install mmv
 brew install ffmpeg

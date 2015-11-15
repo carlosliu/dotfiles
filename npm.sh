@@ -3,9 +3,9 @@
 # To install NVM
 # git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
 
-npm install -g npm@latest
+# npm install -g npm@latest
 
-npm install -g babel coffee-script typescript
+npm install -g babel-cli coffee-script typescript
 npm install -g http-server live-server nodemon
 npm install -g less tsd tern
 
@@ -21,8 +21,3 @@ npm install -g yo generator-code
 
 npm install -g js-beautify typescript-formatter caniuse-cmd
 
-# if [[ -f $HOME/github/typescript-tools/package.json ]]; then
-#     cd $HOME/github/typescript-tools;
-#     git pull origin master
-#     npm install -g;
-# fi
