@@ -9,7 +9,7 @@ npm install -g babel-cli coffee-script typescript
 npm install -g less tsd tern
 npm install -g http-server live-server nodemon
 
-npm install -g jshint jsonlint csslint js-yaml eslint coffeelint
+npm install -g jshint jsonlint csslint js-yaml eslint coffeelint tslint
 npm install -g babel-eslint eslint-plugin-react
 npm install -g eslint-plugin-angular eslint-config-angular
 
