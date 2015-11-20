@@ -197,9 +197,23 @@ function getcertnames() {
     fi;
 }
 
+function debugcanary() {
+    open -n -b "com.google.Chrome.canary" --args --remote-debugging-port=9222;
+}
+
 # `code` opens Visual Studio Code
 function vscode() {
     VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
+}
+
+# `vsc` with no arguments opens the current directory in Visual Studio Code, otherwise
+# opens the given location
+function vsc() {
+    if [ $# -eq 0 ]; then
+        vscode .;
+    else
+        vscode "$@";
+    fi;
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
