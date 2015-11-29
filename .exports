@@ -26,7 +26,6 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
-<<<<<<< HEAD
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
@@ -53,5 +52,3 @@ if which brew > /dev/null; then
     fi
     unset brew_prefix_go
 fi
-=======
->>>>>>> mathiasbynens/master
