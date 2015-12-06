@@ -7,7 +7,7 @@ apm install \
     dash disable-keybindings docblockr \
     editor-stats editorconfig file-icons \
     highlight-column highlight-line highlight-selected marked \
-    minimap minimap-find-and-replace navigate \
+    minimap minimap-find-and-replace \
     open-recent pigments project-manager script sort-lines term2 \
     tree-view-open-files toggle-quotes wakatime zentabs
 
