@@ -7,32 +7,19 @@ brew install caskroom/cask/brew-cask
 apps=(
     1password
     alfred
-    keycue
-    mou
-    java
-    atom
     visual-studio-code
     nvalt
-    textwrangler
-    coteditor
     appcleaner
     iterm2
-    menumeters
-    karabiner
-    dropbox
     google-chrome
     firefox
-    opera
     slack
-    gitter
-    skype
-    transmission
     vlc
     mplayerx
-    adobe-reader
-    squirrel
 )
 # arq
+# karabiner
+# keycue
 # hazel
 # sublime-text3
 # qlcolorcode
@@ -43,12 +30,13 @@ apps=(
 # day-o                   # only Mavericks
 # itsycal                 # Yosemite+
 # seil
+# skype
 # spotify
 # vagrant
 # flux
 # sketch
-# cloudup
 # screenflick
+# squirrel
 # tower
 # transmit
 
